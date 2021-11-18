@@ -21,4 +21,4 @@
 ## Installation
 
 cloning the git rep [https://github.com/aujisti-ador/guessTheNumber-JS.git]
-or simply download a
+or simply download and open index file with a browser.
