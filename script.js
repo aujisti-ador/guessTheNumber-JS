@@ -17,6 +17,8 @@ const setAgainButton = function () {
     document.querySelector('body').style.backgroundColor = '#222'
     document.querySelector('.number').textContent = '?'
     document.querySelector('.guess').value = ''
+    document.querySelector('.check').style.backgroundColor = '#eee'
+    document.querySelector('.check').disabled = false
 }
 
 // when number matched to random number
@@ -27,6 +29,8 @@ const setNumberMatchedUiChange = function () {
     document.querySelector('body').style.backgroundColor = '#60b347'
     document.querySelector('.score').textContent = score
     document.querySelector('.highscore').textContent = highScore
+    document.querySelector('.check').style.backgroundColor = '#808080'
+    document.querySelector('.check').disabled = true
 }
 
 // when number doesn't match to random number
@@ -39,6 +43,9 @@ const setNumberDoesntMatchUiChange = function (guessedNumber) {
         document.querySelector('body').style.backgroundColor = '#222'
         document.querySelector('.number').textContent = '?'
     } else {
+        // when score is below zero
+        document.querySelector('.check').style.backgroundColor = '#808080'
+        document.querySelector('.check').disabled = true
         document.querySelector('.message').textContent = '💥 You Lost...!'
 
     }
