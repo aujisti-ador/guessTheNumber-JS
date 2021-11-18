@@ -44,6 +44,7 @@ const setNumberDoesntMatchUiChange = function (guessedNumber) {
         document.querySelector('.number').textContent = '?'
     } else {
         // when score is below zero
+        document.querySelector('.score').textContent = score
         document.querySelector('.check').style.backgroundColor = '#808080'
         document.querySelector('.check').disabled = true
         document.querySelector('.message').textContent = '💥 You Lost...!'
