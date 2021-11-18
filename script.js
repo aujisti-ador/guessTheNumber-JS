@@ -32,11 +32,16 @@ const setNumberMatchedUiChange = function () {
 // when number doesn't match to random number
 const setNumberDoesntMatchUiChange = function (guessedNumber) {
     score--
-    guessedNumber > randomNumber ? document.querySelector('.message').textContent = '📈 Too High!' : document.querySelector('.message').textContent = '📉 Too Low!'
-    document.querySelector('.score').textContent = score
-    // document.querySelector('.message').textContent = 'Start guessing...!'
-    document.querySelector('body').style.backgroundColor = '#222'
-    document.querySelector('.number').textContent = '?'
+    if (score) {
+        guessedNumber > randomNumber ? document.querySelector('.message').textContent = '📈 Too High!' :
+            document.querySelector('.message').textContent = '📉 Too Low!'
+        document.querySelector('.score').textContent = score
+        document.querySelector('body').style.backgroundColor = '#222'
+        document.querySelector('.number').textContent = '?'
+    } else {
+        document.querySelector('.message').textContent = '💥 You Lost...!'
+
+    }
 }
 
 // when input is empty value
@@ -63,7 +68,6 @@ const isNumberMatched = function (guessedNumber) {
 
 
 }
-
 
 // 'check!' button Handler
 const handleButtonPressCheck = function () {
