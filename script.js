@@ -1,15 +1,11 @@
 let randomNumber = Math.floor(Math.random() * 20) + 1
 let score = 20
 let highScore = 0
-// document.querySelector('.number').textContent = randomNumber
-// console.warn(randomNumber)
-// console.log(document.querySelector('.guess').value = '30')
 
 
 // Set again button
 const setAgainButton = function () {
     randomNumber = Math.floor(Math.random() * 20) + 1
-    // console.warn(randomNumber)
     score = 20
     document.querySelector('.score').textContent = score
     document.querySelector('.message').textContent = 'Start guessing...!'
@@ -77,13 +73,12 @@ const isNumberMatched = function (guessedNumber) {
 
 }
 
-// 'check!' button Handler
+// 'check' button Handler
 const handleButtonPressCheck = function () {
     let guessedNumber = Number(document.querySelector('.guess').value)
     isNumberMatched(guessedNumber)
-    // console.warn(typeof (guessedNumber))
 }
 
-// Handle 'Check!' button
+// Handle 'Check' button
 document.querySelector('.check').addEventListener('click', handleButtonPressCheck)
 document.querySelector('.again').addEventListener('click', setAgainButton)
